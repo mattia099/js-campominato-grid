@@ -26,7 +26,7 @@ buttonPlay.addEventListener('click', function(){
 
 function boxGenerator(nBox , nCol){
     for(let i=0; i<nBox; i++){
-        let box = document.createElement('div');
+        var box = document.createElement('div');
         box.classList.add('square');
         box.append(i+1);
         box.style.width = `calc(100% / ${nCol})`;
@@ -34,6 +34,12 @@ function boxGenerator(nBox , nCol){
     }
 }
 
-function reset(){ grid.innerHTML = "";}
+function reset(){ grid.innerHTML = '';}
+
+grid.addEventListener('click', function(event){
+    event.target.style.background = 'blue';
+    event.target.style.color = 'white';
+})
+
 
 
