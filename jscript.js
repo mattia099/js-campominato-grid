@@ -4,7 +4,7 @@ const selectDifficult = document.getElementById('difficult');
 const grid = document.querySelector('.grid');
 
 buttonPlay.addEventListener('click', function(){
-
+    reset();
     switch (selectDifficult.value){
         case 'easy':
             console.log(selectDifficult.value);
@@ -29,9 +29,11 @@ function boxGenerator(nBox , nCol){
         let box = document.createElement('div');
         box.classList.add('square');
         box.append(i+1);
-        box.style.width = `calc(100% / ${nCol})`
-        grid.appendChild(box);
+        box.style.width = `calc(100% / ${nCol})`;
+        grid.appendChild(box); 
     }
 }
+
+function reset(){ grid.innerHTML = "";}
 
 
