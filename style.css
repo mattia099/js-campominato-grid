@@ -1,0 +1,42 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    max-width: 1300px;
+    margin: 0 auto;
+    height: 80px;
+}
+
+
+#play , #difficult{
+    padding: 5px 20px;
+}
+
+main{
+    height: calc(100vh - 80px);
+    background-color: aquamarine;
+}
+
+.grid{
+    width: 800px;
+    margin: 0 auto;
+    background-color: bisque;
+    display: flex;
+    align-items: flex-start;
+    align-content: flex-start;
+    flex-wrap: wrap;
+}
+.square{
+    aspect-ratio: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid black;
+}
